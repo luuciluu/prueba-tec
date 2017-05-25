@@ -1,1 +1,48 @@
-body {background-color: blue;}
+$primary: black;
+$white: white;
+
+$font: "Open Sans", sans-serif !important;
+body{ font-family: $font;}
+
+
+.main {
+  &__video {
+    //height: 100px;
+    border:1px solid red;
+  }
+}
+
+.hola {
+  border:1px solid blue;
+  height: 100px;
+}
+.adios {
+  border: 1px solid green;
+  height: 200px;
+}
+.banners {
+
+  &__left__first, &__left__second, &__right{
+      img{
+      width: 100%;
+    }
+  }
+}
+
+.product{
+  &__content__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid $primary;
+    margin-top: .5rem;
+    padding: .2rem 0;
+    text-transform: uppercase;
+
+    .description__price {
+      background-color: $primary;
+      color: $white;
+      padding: 0 .5rem;
+    }
+  }
+}

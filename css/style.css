@@ -1,3 +1,37 @@
 body {
-     background-color: blue;
+     font-family: "Open Sans", sans-serif !important;
+}
+
+.main__video {
+     border: 1px solid red;
+}
+
+.hola {
+     border: 1px solid blue;
+     height: 100px;
+}
+
+.adios {
+     border: 1px solid green;
+     height: 200px;
+}
+
+.banners__left__first img, .banners__left__second img, .banners__right img {
+     width: 100%;
+}
+
+.product__content__description {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     border-top: 2px solid black;
+     margin-top: .5rem;
+     padding: .2rem 0;
+     text-transform: uppercase;
+}
+
+.product__content__description .description__price {
+     background-color: black;
+     color: white;
+     padding: 0 .5rem;
 }
