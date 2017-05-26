@@ -4,59 +4,86 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation-flex.css">
-    <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation.css">
-  </head>
-  <body onloand="leer_jason();">
-    <div class="row main">
-      <div class="large-12 columns flex-video main__video">
-        <!-- <iframe src="https://www.youtube.com/embed/ELKbtFljucQ"></iframe> -->
-      </div>
-    </div>
-    <!-- large-up-2 small-up-1 -->
-    <div class="row banners flex-container flex-dir-row">
-        <div class="small-12 medium-7 large-7 small-order-1 columns banners__left">
-          <div class="banners__left__fist"><img src="img/banner-1.jpg" alt="banner-1"></div>
-          <div class="banners__left__second "><img src="img/banner-3.jpg" alt="banner-3"></div>
-        </div>
-        <div class="small-12 medium-5 small-order-2 columns banners__right">
-          <img src="img/banner-2.jpg" alt="banner-2">
-        </div>
-        <div class="small-12 medium-7 large-7 small-order-3 columns">
-
-        </div>
-    </div>
-
-    <!-- <div class="row banners">
-        <div class="small-12 medium-7 large-7 small-order-1 columns banners__left">
-          <img src="img/banner-1.jpg" alt="banner-1">
-        </div>
-        <div class="small-12 medium-5 small-order-2 columns banners__right">
-          <img src="img/banner-2.jpg" alt="banner-2">
-        </div>
-        <div class="small-12 medium-7 large-7 small-order-3 columns">
-        <img src="img/banner-3.jpg" alt="banner-3">
-        </div>
-    </div> -->
-
-    <p><a data-toggle="exampleModal9"><img src="img/banner-3.jpg" alt="banner-3"></a></p>
-
-    <div class="reveal" id="exampleModal9" data-reveal data-overlay="false">
-      <p>I feel so free!</p>
-      <button class="close-button" data-close aria-label="Close reveal" type="button">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="row product" id="product__item"></div>
-
-
+    <title>Prueba Técnica</title>
     <script src="node_modules/foundation-sites/node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/foundation-sites/node_modules/what-input/dist/what-input.js"></script>
     <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation-flex.css">
+    <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body >
+    <div class="row main">
+    <div class="small-12 columns main__video align-centered">
+      <video  width="100%" controls>
+        <source src="img/videoLP.mp4" type="video/mp4">
+      Lo sentimos. Tu navegador no soporta el vídeo.
+      </video>
+
+    </div>
+    </div>
+
+    <div class="row banners flex-container flex-dir-row">
+        <div class="small-12 medium-7 large-7 small-order-1 columns banners__first">
+          <img src="img/banner-1.jpg" alt="banner-1">
+        </div>
+        <div class="small-12 medium-5 small-order-2 columns banners__second align-self-right">
+          <img src="img/banner-2.jpg" alt="banner-2">
+        </div>
+        <div class="small-12 medium-7 large-7 small-order-3 columns banners__third align-self-left">
+        <img src="img/banner-3.jpg" alt="banner-3">
+        </div>
+    </div>
+    <!-- Productos -->
+    <div class="row product flex-container flex-dir-row" id="product__item"></div>
+
+    <!-- Modal -->
+   <div id="product__detail-modal" class="modal">
+
+     <div class="modal-content">
+       <span class="modal-content__close">&times;</span>
+       <div class="modal-content__description row align-middle">
+       </div>
+     </div>
+   </div>
+   <script type="text/javascript">
+       var modal = $('#product__detail-modal')[0];
+       var content = $('.modal-content__description')[0];
+       var link = $('#product__detail')[0];
+       var span = $(".modal-content__close")[0];
+
+       function display(name){
+         $(modal).fadeIn("slow");
+         get_product(name);
+       }
+
+       $(span).click( function() {
+           $(modal).fadeOut("slow", function(){
+             $(content).empty();
+           });
+
+       });
+
+       $(window).click(function(event) {
+           if (event.target == modal) {
+             $(modal).fadeOut("slow", function(){
+               $(content).empty();
+             });
+           }
+       });
+       $(document).keyup(function(e) {
+         if (e.keyCode == 27) {
+           $(modal).fadeOut("slow", function(){
+             $(content).empty();
+           });
+        }
+      });
+   </script>
+
+
   </body>
 </html>
