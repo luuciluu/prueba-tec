@@ -1,5 +1,6 @@
 @import 'settings';
 
+// Settings
 $primary: black;
 $white: white;
 $red: #8a161e;
@@ -8,12 +9,11 @@ $grey: #7b7b7b;
 $font: "Open Sans", sans-serif !important;
 body{ font-family: $font;}
 
-
+// _________________________
 
 .main {
   &__video {
     margin-bottom: .5rem;
-
   }
 }
 
@@ -34,7 +34,6 @@ body{ font-family: $font;}
     bottom: 0;
     left: 0;
     right: 0;
-
   }
 }
 
@@ -43,9 +42,9 @@ body{ font-family: $font;}
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 2px solid $primary;
     margin-top: .5rem;
     padding: .2rem 0;
+    border-top: 2px solid $primary;
     text-transform: uppercase;
     letter-spacing: 2px;
 
@@ -54,10 +53,10 @@ body{ font-family: $font;}
     }
 
     .description__price {
-      background-color: $primary;
-      color: $white;
       padding: .2rem .5rem;
       font-size: 14px;
+      color: $white;
+      background-color: $primary;
     }
   }
 }
@@ -111,26 +110,26 @@ body{ font-family: $font;}
           flex-direction: column;
 
           &__title{
+            padding-bottom: .5rem;
             text-transform: uppercase;
             font-weight: 200;
-            padding-bottom: .5rem;
             border-bottom: 2px solid black;
           }
 
           &__price {
             width: 50px;
-            align-content: center;
-            align-self: flex-end;
-            background-color: $primary;
-            color: $white;
-            width: 50px;
-            padding: .2rem .5rem;
-            font-size: 18px;
             margin-top: -0.3rem;
+            padding: .2rem .5rem;
+            align-self: flex-end;
+            font-size: 18px;
+            color: $white;
+            background-color: $primary;
+
           }
 
           &__icons {
             padding: 1.5rem 0;
+
             .columns {
               display: flex;
               flex-direction: column;
@@ -142,24 +141,24 @@ body{ font-family: $font;}
                 justify-content: center;
 
                 &__item {
-                  color: $grey;
                   padding: 0.2rem;
+                  color: $grey;
                 }
               }
 
               .icons__text {
-                text-align: center;
-                color: $grey;
-                text-transform: uppercase;
-                font-weight: 500;
                 font-size: 10px;
+                font-weight: 500;
+                text-align: center;
+                text-transform: uppercase;
+                color: $grey;
               }
             }
           }
 
           &__button {
-            background-color: #8a161e;
             text-transform: uppercase;
+            background-color: #8a161e;
 
             &:hover {
               background-color: lighten($red, 10%);
