@@ -2,18 +2,13 @@ var objects = [];
 var start = 10;
 
 $(document).ready(function(){
-  lee_json(0, 10);
+  lee_json(0, 50);
 
 });
 
-
-
-
-
-
 function lee_json(start, end){
   var obj = [];
-  console.log("estoy dentro");
+
   $.getJSON("/products.json", function(products) {
 
     for (var i = start; (i < products["products"].length && i<end); i++) {
@@ -47,10 +42,10 @@ var get_product = function(name) {
           if(obj["images"].length != 0){
             image_principal = obj["images"][0].src;
             images = obj["images"];
-            item = "<div class='large-6 medium-12 small-12 columns description__image'><img src='"+image_principal+"' alt='img-producto'>";
+            item = "<div class='large-6 medium-12 small-12 columns description__image'><img id='description__image__item' src='"+image_principal+"' alt='img-producto'>";
           }else{
               image_principal = "img/banner-1.jpg";
-              item = "<div class='large-6 medium-12 small-12 columns description__image'><img src='"+image_principal+"' alt='img-producto'></div>";
+              item = "<div class='large-6 medium-12 small-12 columns description__image'><img id='description__image__item' src='"+image_principal+"' alt='img-producto'></div>";
           }//end if-else
         }//end if
       }//end for
@@ -75,17 +70,17 @@ var get_product = function(name) {
     });
 }
 
-$(window).scroll(function(){
-
-   var windowHeight = $(window).scrollTop();
-   var container = $(".product").offset();
-
-   var cont = 10;
-   container = container.top;
-
-   if(windowHeight >= container+100 ){
-     lee_json(start, cont);
-     console.log(start);
-     start +=10;
-   }
-});
+// $(window).scroll(function(){
+//
+//    var windowHeight = $(window).scrollTop();
+//    var container = $(".product").offset();
+//
+//    var cont = 10;
+//    container = container.top;
+//
+//    if(windowHeight >= container+100 ){
+//      lee_json(start, cont);
+//      console.log(start);
+//      start +=10;
+//    }
+// });

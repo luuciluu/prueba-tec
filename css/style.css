@@ -28,9 +28,9 @@ body {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
-     border-top: 2px solid black;
      margin-top: .5rem;
      padding: .2rem 0;
+     border-top: 2px solid black;
      text-transform: uppercase;
      letter-spacing: 2px;
 }
@@ -40,10 +40,10 @@ body {
 }
 
 .product__content__description .description__price {
-     background-color: black;
-     color: white;
      padding: .2rem .5rem;
      font-size: 14px;
+     color: white;
+     background-color: black;
 }
 
 .modal {
@@ -97,22 +97,20 @@ body {
 }
 
 .modal-content__description .description__details__title {
+     padding-bottom: .5rem;
      text-transform: uppercase;
      font-weight: 200;
-     padding-bottom: .5rem;
      border-bottom: 2px solid black;
 }
 
 .modal-content__description .description__details__price {
      width: 50px;
-     align-content: center;
-     align-self: flex-end;
-     background-color: black;
-     color: white;
-     width: 50px;
-     padding: .2rem .5rem;
-     font-size: 18px;
      margin-top: -0.3rem;
+     padding: .2rem .5rem;
+     align-self: flex-end;
+     font-size: 18px;
+     color: white;
+     background-color: black;
 }
 
 .modal-content__description .description__details__icons {
@@ -132,21 +130,21 @@ body {
 }
 
 .modal-content__description .description__details__icons .columns .icons__image__item {
-     color: #7b7b7b;
      padding: 0.2rem;
+     color: #7b7b7b;
 }
 
 .modal-content__description .description__details__icons .columns .icons__text {
-     text-align: center;
-     color: #7b7b7b;
-     text-transform: uppercase;
-     font-weight: 500;
      font-size: 10px;
+     font-weight: 500;
+     text-align: center;
+     text-transform: uppercase;
+     color: #7b7b7b;
 }
 
 .modal-content__description .description__details__button {
-     background-color: #8a161e;
      text-transform: uppercase;
+     background-color: #8a161e;
 }
 
 .modal-content__description .description__details__button:hover {
